@@ -8,16 +8,16 @@ import PenaltyMinutesGraph from './penaltyMinutesGraph';
 function App() {
   const [url, setUrl] = useState();
   let textInputRef = React.createRef();
- 
+
   if (!url) {
     return (
       <div>
         <input
-          placeholder = 'Url'
-          ref = {(ref) => textInputRef = ref}
+          placeholder='Url'
+          ref={(ref) => textInputRef = ref}
         />
         <button
-          onClick = {() => setUrl(textInputRef.value)}
+          onClick={() => setUrl(textInputRef.value)}
         > Enter </button>
       </div>
     );
@@ -42,13 +42,13 @@ function renderPlots(url) {
   return (
     <div className="App">
       <div class="lineChart">
-        <HockeyPlot data = {data} /> 
+        <HockeyPlot data={data} />
       </div>
       <div class="ppGoals">
-        <HockeyGraph data = {data} />
+        <HockeyGraph data={data} />
       </div>
       <div class="ppMin">
-        <PenaltyMinutesGraph data = {data} />
+        <PenaltyMinutesGraph data={data} />
       </div>
     </div>
   );

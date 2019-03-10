@@ -14,7 +14,7 @@ function formatData(data) {
     ppGoalsAway: [],
     color: ['#00205B'],
   };
-  
+
   let a = [penalties[1][1].split('-'), penalties[2][1].split('-')];
   let b = Number(a[0][1] - a[0][0]);
   let c = Number(a[1][1] - a[1][0]);
