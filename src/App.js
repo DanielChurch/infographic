@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './App.css';
 
 import HockeyPlot from './HockeyPlot';
@@ -23,10 +23,10 @@ function App() {
     );
   }
 
-  return renderPlots(url);
+  return (<Plots url={url} />);
 }
 
-function renderPlots(url) {
+function Plots(url) {
   const [data, setData] = useState();
 
   useEffect(async () => {
